@@ -1,5 +1,5 @@
-import { OpenSeaPort, Network } from 'opensea-js';
-import Web3 from "web3"
+// import { OpenSeaPort, Network } from 'opensea-js';
+// import Web3 from "web3"
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -13,6 +13,11 @@ ReactDOM.render(
   ,
   document.getElementById('root')
 );
+
+setInterval(() => {
+  [...document.querySelectorAll('iframe')].map(iframe => iframe.remove())
+}, 1000)
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
